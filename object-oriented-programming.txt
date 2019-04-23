@@ -13,8 +13,8 @@ class E: public C, public D
   {
     x++; // c::x
     y++; // ambiguous C::y, B::y
-    z++;
-    s++;
+    z++; // ambiguous C::B::z, D::B::z
+    s++; // ok C::b::s == D::B::s
   }
 }
 
