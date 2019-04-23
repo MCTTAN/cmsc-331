@@ -11,7 +11,7 @@ class E: public C, public D
 {
   void access()
   {
-    x++; // c::x
+    x++; // C::x
     y++; // ambiguous C::y, B::y
     z++; // ambiguous C::B::z, D::B::z
     s++; // ok C::b::s == D::B::s
