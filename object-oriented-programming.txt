@@ -1,0 +1,35 @@
+
+EXAMPLE 1: C++
+
+sub object lattice
+
+class A { public int n; }
+class B { public: int y; int x; static int s; }
+class C: public virtual A, public B { public: int x, int y; }
+class D: public virtual A, public B {};
+class E: public C, public D
+{
+  void access()
+  {
+    x++;
+    y++;
+    z++;
+    s++;
+  }
+}
+
+B   A   B
+ \ / \ /
+  C   D
+   \ /
+    E
+
+When it's virtual, it creates one object.
+If you have C: A and D: A,
+  A   A
+  |   |
+  D   C
+But if you have C: virtual A and D: virtual A,
+    A
+   / \
+  D   C
