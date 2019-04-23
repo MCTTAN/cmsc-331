@@ -11,8 +11,8 @@ class E: public C, public D
 {
   void access()
   {
-    x++;
-    y++;
+    x++; // c::x
+    y++; // ambiguous C::y, B::y
     z++;
     s++;
   }
@@ -23,6 +23,11 @@ B   A   B
   C   D
    \ /
     E
+    
+B - y, z, static s
+A - x
+B - y, z, static s
+C - x, y
 
 When it's virtual, it creates one object.
 If you have C: A and D: A,
