@@ -1,11 +1,23 @@
-class A { int z; }
+class A { int n; }
 class B { float n; }
 class C: public A, public B {}
 class D: public virtual C {}
-class E: public virtual C { char X; }
+class E: public virtual C { char n; }
 class F: public D, public E {}
 main()
 {
   F f;
-  f.x = 0;
+  f.n = 0;
 }
+
+   A   B
+   \   /
+     C
+   /   \
+   D   E
+   \   /
+     F
+     
+A - int n
+B - float n
+E - char n
