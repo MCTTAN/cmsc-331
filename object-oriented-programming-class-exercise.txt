@@ -3,7 +3,7 @@ class B { float n; }
 class C: public A, public B {}
 class D: public virtual C {}
 class E: public virtual C { char X; }
-class F: public D, public C {}
+class F: public D, public E {}
 main()
 {
   F f;
