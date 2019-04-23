@@ -1,0 +1,11 @@
+class A { int z; }
+class B { float n; }
+class C: public A, public B {}
+class D: public virtual C {}
+class E: public virtual C { char X; }
+class F: public D, public C {}
+main()
+{
+  F f;
+  f.x = 0;
+}
