@@ -21,3 +21,4 @@ main()
 A - int n
 B - float n
 E - char n
+E::n
