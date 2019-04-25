@@ -1,0 +1,20 @@
+overriding
+overloading
+
+            Parent
+        GetHairColor()
+        /            \
+     Child I      Child II
+GetHairColor()  GetHairColor()
+GetHairColor(x)
+GetHairColor(x, y)
+
+-----
+
+
+abc-example.py
+
+import abc
+
+class Bird(abc.ABC):
+  @
