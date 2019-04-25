@@ -18,3 +18,33 @@ import abc
 
 class Bird(abc.ABC):
   @
+
+
+-----
+
+Method Resolution Order (MRO)
+
+Algorithm -> C3
+Linearization
+merge()
+
+o = object
+class A(o):
+pass
+
+class B(o):
+pass
+
+class C(A, B):
+pass
+
+L[o] = O
+L[A] = AO
+L[B] = BO
+L[C] = C merge(L[A], L[B], AB)
+= C merge(AO, BO, AB)
+= C
+
+(A B C D)
+A = head
+B C D = tail (rest of the list)
