@@ -48,3 +48,17 @@ L[C] = C merge(L[A], L[B], AB)
 (A B C D)
 A = head
 B C D = tail (rest of the list)
+
+-------
+
+L[C] = C merge(L[A], L[B], AB)
+= C merge (AO, BO, AB)
+= CA merge(O, BO, B)
+
+L[C] = C A merge(O, BO, B)
+= C A B merge(O, O)
+= C A B O
+
+
+
+https://www.python.org/download/releases/2.3/mro/
